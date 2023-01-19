@@ -1,4 +1,4 @@
--- +migrate Up
+-- +migrate up
 
 CREATE TABLE IF NOT EXISTS "Products" (
   title  TEXT NOT NULL,
@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS "Products" (
   rating Float NOT NULL
 );
 
--- +migrate Down
+-- +migrate down
 
 DROP TABLE "Products";

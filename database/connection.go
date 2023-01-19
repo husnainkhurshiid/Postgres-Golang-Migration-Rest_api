@@ -16,6 +16,6 @@ func CheckError(err error) {
 	if err != nil {
 		fmt.Print(err)
 	} else {
-		fmt.Println("Database Connection Eastablished")
+		fmt.Print("Database Connected")
 	}
 }
