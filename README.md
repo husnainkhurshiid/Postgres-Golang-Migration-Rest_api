@@ -11,15 +11,13 @@
           go run main.go --migration down
 - ### Error Handling
 
-  - #### Error parsing migration
+  If you're getting the bellow error
 
-    If you're getting the below error
+  ```
+  Error parsing migration (table_name.sql): ERROR: no Up/Down annotations found, so no statements were executed.
+  ```
 
-    ```
-    Error parsing migration (table_name.sql): ERROR: no Up/Down annotations found, so no statements were executed.
-    ```
+  In the migration file Set tags as `Up` and `Down` instead of `up` `down`
 
-    In the migration file Set tags as `Up` and `Down` instead of `up` `down`
-
-    - -- +migrate UP
-    - -- +migrate Down
+  - -- +migrate UP
+  - -- +migrate Down
