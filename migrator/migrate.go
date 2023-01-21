@@ -23,10 +23,10 @@ func Migrate(db *sql.DB) {
 	case "up":
 		migrate, err := migrate.Exec(db, "postgres", migrations, migrate.Up)
 		shared.CheckError(err)
-		fmt.Printf("\n%d Migration applied", migrate)
+		fmt.Printf("\n%d Migration applied\n", migrate)
 	case "down":
 		migrate, err := migrate.Exec(db, "postgres", migrations, migrate.Down)
 		shared.CheckError(err)
-		fmt.Printf("\n%d Migration applied", migrate)
+		fmt.Printf("\n%d Migration applied\n", migrate)
 	}
 }
