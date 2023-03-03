@@ -1,12 +1,13 @@
--- +migrate up
+-- +migrate Up
 
 CREATE TABLE IF NOT EXISTS "Products" (
+  id uuid PRIMARY KEY,
   title  TEXT NOT NULL,
-  price INT NOT NULL,
+  price float NOT NULL,
   info TEXT NOT NULL,
-  rating Float NOT NULL
+  rating float NOT NULL
 );
 
--- +migrate down
+-- +migrate Down
 
 DROP TABLE "Products";
